@@ -42,5 +42,11 @@
 <h2>Add a project:</h2>
 <%= render "projects/form" %>
 
+<h2>Educations</h2>
+<%= render @cv.educations %>
+
+<h2>Add an education:</h2>
+<%= render "educations/form" %>
+
 <%= link_to 'Edit', edit_cv_path(@cv) %> |
 <%= link_to 'Back', cvs_path %>

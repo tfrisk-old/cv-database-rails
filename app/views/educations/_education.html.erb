@@ -1,0 +1,18 @@
+<p><b>Start date:</b>
+  <%= education.startdate %></p>
+
+<p><b>End date:</b>
+  <%= education.enddate %></p>
+
+<p><b>Title:</b>
+  <%= education.title %></p>
+
+<p><b>Description:</b>
+  <%= education.description %></p>
+
+<p>
+  <%= link_to 'Delete education', [education.cv, education],
+                :confirm => 'Are you sure?',
+                :method => :delete %>
+</p>
+

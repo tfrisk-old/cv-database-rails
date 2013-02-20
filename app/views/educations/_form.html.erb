@@ -1,0 +1,23 @@
+
+<%= form_for([@cv, @cv.educations.build]) do |f| %>
+  <div class="field">
+    <%= f.label :startdate %>
+    <%= f.date_select :startdate %>
+  </div>
+  <div class="field">
+    <%= f.label :enddate %>
+    <%= f.date_select :enddate %>
+  </div>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

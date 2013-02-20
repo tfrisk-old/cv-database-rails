@@ -6,6 +6,7 @@ class Cv < ActiveRecord::Base
 
   has_many :projects, :dependent => :destroy
   has_many :languages, :dependent => :destroy
+  has_many :educations, :dependent => :destroy
   has_many :skills
 
   accepts_nested_attributes_for :skills, :allow_destroy => :true,
