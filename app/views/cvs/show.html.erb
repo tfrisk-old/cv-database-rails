@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Forename:</b>
+  <%= @cv.forename %>
+</p>
+
+<p>
+  <b>Surname:</b>
+  <%= @cv.surname %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @cv.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @cv.description %>
+</p>
+
+<p>
+  <b>Freetext:</b>
+  <%= @cv.freetext %>
+</p>
+
+
+<%= link_to 'Edit', edit_cv_path(@cv) %> |
+<%= link_to 'Back', cvs_path %>
