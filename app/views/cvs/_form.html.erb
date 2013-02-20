@@ -1,4 +1,5 @@
-<%= form_for(@cv) do |f| %>
+<% @cv.skills.build %>
+<%= form_for(@cv) do |cv_form| %>
   <% if @cv.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@cv.errors.count, "error") %> prohibited this cv from being saved:</h2>
@@ -12,26 +13,29 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :forename %><br />
-    <%= f.text_field :forename %>
+    <%= cv_form.label :forename %><br />
+    <%= cv_form.text_field :forename %>
   </div>
   <div class="field">
-    <%= f.label :surname %><br />
-    <%= f.text_field :surname %>
+    <%= cv_form.label :surname %><br />
+    <%= cv_form.text_field :surname %>
   </div>
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= cv_form.label :title %><br />
+    <%= cv_form.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= cv_form.label :description %><br />
+    <%= cv_form.text_area :description %>
   </div>
+  <h2>Skills</h2>
+  <%= render :partial => 'skills/form',
+        :locals => {:form => cv_form} %>
   <div class="field">
-    <%= f.label :freetext %><br />
-    <%= f.text_area :freetext %>
+    <%= cv_form.label :freetext %><br />
+    <%= cv_form.text_area :freetext %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= cv_form.submit %>
   </div>
 <% end %>

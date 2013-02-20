@@ -1,0 +1,12 @@
+<%= form.fields_for :skills do |skill_form| %>
+  <div class="field">
+    <%= skill_form.label :name, 'Skill:' %>
+    <%= skill_form.text_field :name %>
+  </div>
+  <% unless skill_form.object.nil? || skill_form.object.new_record? %>
+    <div class="field">
+      <%= skill_form.label :_destroy, 'Remove:' %>
+      <%= skill_form.check_box :_destroy %>
+    </div>
+  <% end %>
+<% end %>
