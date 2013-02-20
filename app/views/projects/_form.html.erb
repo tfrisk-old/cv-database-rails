@@ -1,8 +1,20 @@
 
 <%= form_for([@cv, @cv.projects.build]) do |f| %>
   <div class="field">
+    <%= f.label :startdate %>
+    <%= f.date_select :startdate %>
+  </div>
+  <div class="field">
+    <%= f.label :enddate %>
+    <%= f.date_select :enddate %>
+  </div>
+  <div class="field">
     <%= f.label :customer %><br />
     <%= f.text_field :customer %>
+  </div>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
