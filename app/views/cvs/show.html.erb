@@ -25,6 +25,12 @@
   <%= @cv.freetext %>
 </p>
 
+<h2>Languages</h2>
+<%= render @cv.languages %>
+
+<h2>Add a language:</h2>
+<%= render "languages/form" %>
+
 <h2>Projects</h2>
 <%= render @cv.projects %>
 

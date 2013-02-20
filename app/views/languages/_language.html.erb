@@ -1,0 +1,12 @@
+<p><b>Language:</b>
+  <%= language.name %></p>
+
+<p><b>Level:</b>
+  <%= language.level %></p>
+
+<p>
+  <%= link_to 'Delete language', [language.cv, language],
+                :confirm => 'Are you sure?',
+                :method => :delete %>
+</p>
+
