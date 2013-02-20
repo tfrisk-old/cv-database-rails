@@ -5,4 +5,5 @@ class Cv < ActiveRecord::Base
   validates :surname, :presence => :true
 
   has_many :projects, :dependent => :destroy
+  has_many :languages, :dependent => :destroy
 end

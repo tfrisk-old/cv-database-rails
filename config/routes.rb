@@ -1,6 +1,7 @@
 Cvpankki::Application.routes.draw do
   resources :cvs do
     resources :projects
+    resources :languages
   end
 
 
