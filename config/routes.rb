@@ -1,5 +1,7 @@
 Cvpankki::Application.routes.draw do
-  resources :cvs
+  resources :cvs do
+    resources :projects
+  end
 
 
   # The priority is based upon order of creation:

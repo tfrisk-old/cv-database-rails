@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  startdate: 2013-02-20 20:13:22
+  enddate: 2013-02-20 20:13:22
+  customer: MyString
+  title: MyString
+  description: MyText
+  cv: 
+
+two:
+  startdate: 2013-02-20 20:13:22
+  enddate: 2013-02-20 20:13:22
+  customer: MyString
+  title: MyString
+  description: MyText
+  cv: 

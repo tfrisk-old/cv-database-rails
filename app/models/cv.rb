@@ -3,4 +3,6 @@ class Cv < ActiveRecord::Base
 
   validates :forename, :presence => :true
   validates :surname, :presence => :true
+
+  has_many :projects, :dependent => :destroy
 end

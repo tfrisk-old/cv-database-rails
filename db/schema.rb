@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130220175915) do
+ActiveRecord::Schema.define(:version => 20130220181322) do
 
   create_table "cvs", :force => true do |t|
     t.string   "forename"
@@ -22,5 +22,18 @@ ActiveRecord::Schema.define(:version => 20130220175915) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "projects", :force => true do |t|
+    t.datetime "startdate"
+    t.datetime "enddate"
+    t.string   "customer"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "cv_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "projects", ["cv_id"], :name => "index_projects_on_cv_id"
 
 end

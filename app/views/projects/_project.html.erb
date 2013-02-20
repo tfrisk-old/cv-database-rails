@@ -1,0 +1,16 @@
+<p>
+  <b>Customer:</b>
+  <%= project.customer %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= project.description %>
+</p>
+
+<p>
+  <%= link_to 'Delete project', [project.cv, project],
+                :confirm => 'Are you sure?',
+                :method => :delete %>
+</p>
+
